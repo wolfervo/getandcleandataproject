@@ -26,10 +26,10 @@ run_analysis <- function() {
 
       ## Collect test data for subject (sub), activity (y), and observations (x)
       ## into one data.frame (test).
-      sub <- read.table(unz(temfile, "UCI HAR Dataset/test/subject_test.txt"), col.names = "subject")
-      y <- read.table(unz(temfile, "UCI HAR Dataset/test/y_test.txt"), col.names = "activity")
-      x <- read.table(unz(temfile, "UCI HAR Dataset/test/X_test.txt"), col.names = features)
-      test <- cbind(sub, y, x)
+      sub2 <- read.table(unz(temfile, "UCI HAR Dataset/test/subject_test.txt"), col.names = "subject")
+      y2 <- read.table(unz(temfile, "UCI HAR Dataset/test/y_test.txt"), col.names = "activity")
+      x2 <- read.table(unz(temfile, "UCI HAR Dataset/test/X_test.txt"), col.names = features)
+      test <- cbind(sub2, y2, x2)
 
       ## Combine training and test data into one data.frame (comp).
       comp <- rbind(train, test)
@@ -91,6 +91,6 @@ run_analysis <- function() {
       
       ## tidydata should be a new data.frame; 180 observations of 68 variables.
       ## Write tidydata to a .txt file in the working directory.
-      write.table(tidydata, file = "tidydata.txt")
+      write.table(tidydata, file = "tidydata.txt", row.names = FALSE)
       print("Analysis Complete; tidydata.txt available in working directory.")
 }

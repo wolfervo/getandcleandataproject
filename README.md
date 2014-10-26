@@ -33,14 +33,14 @@ Create a dataframe: cbind() sub, y and x together; assign as "train"
 
 Unzip test files from the "UCI HAR Dataset/test/" folder and assign the dataframes to named objects:
       
-      1. unzip "sbuject_test" and set column name as "subject"; assign as "sub"
-      2. unzip "y_test" and set column name as "activity"; assign as "y"
-      3. unzip "x_test" and set column names as the features character vector; assign as "x"
+      1. unzip "sbuject_test" and set column name as "subject"; assign as "sub2"
+      2. unzip "y_test" and set column name as "activity"; assign as "y2"
+      3. unzip "x_test" and set column names as the features character vector; assign as "x2"
 Create a dataframe: cbind() sub, y and x together; assign as "test"
 
 Create a dataframe: rbind() train and test together; assign as "comp".
 
-comp should be a dataframe of 10,299 observations of 563 variables.
+comp should be a dataframe of 10,299 observations on 563 variables.
 
 Remove the temporary file.
 
@@ -103,4 +103,4 @@ Retrieving Data
       
 To read tidydata.txt back into R please use the following script:
 
-read.table("tidydata.txt", check.names = FALSE)
+read.table("tidydata.txt", check.names = FALSE, header = TRUE)

@@ -74,7 +74,7 @@ The tidydata.txt dataset contains the following two grouping variables:
 
       1. "subject"" (30 subjects)
       2. "activity"" (factor containing 6 activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING)
-The tidydata.txt dataset contains the following 66 measurement variables. The observation for each variable in tidydata.txt is the mean of all variable measurements in the source data by each unique subject-activity pairing (i.e., 180 observations of each measurement variable):
+The tidydata.txt dataset contains the following 66 measurement variables. The observation for each variable in tidydata.txt is the mean of all variable measurements in the source data by each unique subject-activity pairing (i.e., 180 observations of each measurement variable). Note that the variable observation units were removed through normalization in the raw data preparation; therefore the measurement variables listed below have no units:
 
       1. "time-bodyaccelerometer-mean-x"                           
       2. "time-bodyaccelerometer-mean-y"                           
